@@ -1,0 +1,12 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Node js Guide",
+  "main": "FirstApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node FirstApp.js"
+  },
+  "author": "Shubham Mahulkar",
+  "license": "ISC"
+}
