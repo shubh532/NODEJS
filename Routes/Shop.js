@@ -1,9 +1,11 @@
 const express=require("express")
+const path=require("path")
 const Routes=express.Router()
+const RootPath=require("../Helpers/path.js")
 
 
 Routes.get("/",(req,res,next)=>{
-    res.send("<html> <body> <h1>WelCome To Express Js</h1></body></html>")
+    res.sendFile(path.join(RootPath,"View","Shop.html"))
   })
   
 

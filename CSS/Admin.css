@@ -1,0 +1,19 @@
+.nav{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(212, 179, 179);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid;
+}
+
+.form input, .form button{
+  padding: 5px;
+  margin: 5px;
+}
