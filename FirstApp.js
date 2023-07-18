@@ -1,9 +1,17 @@
 const http = require('http');
-const RequestHandeler=require("./RequestHandler")
+const express=require("express")
+const app=express()
 
-const server = http.createServer(RequestHandeler)
+app.use((req, res, next)=>{
+  res.send({Key:"value"})
+  console.log("Hi Iam Middleware")
+  next()
+})
+app.use((req, res, next)=>{
+  
+  console.log("Hi I am another Middleware")
+})
 
-
-server.listen(4000, 'localhost', () => {
+app.listen(4000, 'localhost', () => {
   console.log('Server is running on http://localhost:4000');
-});
+})
