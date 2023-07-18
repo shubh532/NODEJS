@@ -27,13 +27,12 @@ function RequestHandeler(req, res) {
             const parseBody = Buffer.concat(body).toString()
             const message = parseBody.split("=")[1];
             fs.writeFileSync("message.txt", message);
-            res.write(`<head><title>${message}</title></head>`)
         })
         res.statusCode = 302
         res.setHeader("Location", '/')
         return res.end();
     }
-    // res.setHeader("Content-Type","text-html")
+
 }
 
 module.exports = RequestHandeler;
