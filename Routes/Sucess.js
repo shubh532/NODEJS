@@ -1,10 +1,6 @@
 const express = require("express")
-const path= require("path")
-const RootPath=require("../Helpers/path.js")
 const Router = express.Router()
-
-Router.get("/Sucess", (req, res, next) => {
-    res.sendFile(path.join(RootPath,"View","Sucess.html"))
-})
+const SucessController=require("../Controllers/Success")
+Router.get("/Sucess",SucessController.SucessMsg )
 module.exports=Router
 
